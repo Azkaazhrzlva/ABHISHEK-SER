@@ -25,11 +25,11 @@ const handler = async (m, {conn, usedPrefix, command, text}) => {
       aki.step = step;
       const resultes2 = await translate(question, {to: 'es', autoCorrect: false});
       let txt = `🎮 *AKINATOR* 🎮\n\n*PLAYER: @${m.sender.split('@')[0]}*\n*ASK: ${resultes2.text}*\n\n`;
-      txt += '*0 - Yes*\n';
-      txt += '*1 - No*\n';
-      txt += '*2 - Dont Know*\n';
-      txt += '*3 - Probably Yes*\n';
-      txt += '*4 - Probably No*\n\n';
+      txt += '*0 - Benar*\n';
+      txt += '*1 - tidak*\n';
+      txt += '*2 - Yo Ndak Tau*\n';
+      txt += '*3 - Mungkin Iya*\n';
+      txt += '*4 - Mungkin Tidak*\n\n';
       txt += `*Use The Command ${usedPrefix + command} end To End Akinator Game*`;
       const soal = await conn.sendMessage(m.chat, {text: txt, mentions: [m.sender]}, {quoted: m});
       aki.soal = soal;
